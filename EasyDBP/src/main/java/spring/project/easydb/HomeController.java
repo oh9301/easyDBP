@@ -19,7 +19,7 @@ public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	// GIT 테스트 가즈아
-	// GIT 테스트으으으으
+	// GIT 테스트으으으으2
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
