@@ -18,8 +18,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	// GIT ¼öÁ¤¿ë TESTÀÔ´Ï´Ù.
-	// GIT ¼öÁ¤¿ë TESTÀÔ´Ï´Ù. 2¹øÂ°
+	// GIT í…ŒìŠ¤íŠ¸ ê°€ì¦ˆì•„
+	// GIT í…ŒìŠ¤íŠ¸ìœ¼ìœ¼ìœ¼ìœ¼
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
