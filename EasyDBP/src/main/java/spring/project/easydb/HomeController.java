@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class HomeController {
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
-	
+	// GIT 수정용 TEST입니다.
 	/**
 	 * Simply selects the home view to render by returning its name.
 	 */
