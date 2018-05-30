@@ -8,14 +8,20 @@ public class TableVO {
 	ArrayList<String> columnNameList;
 	ArrayList<String> columnValueList;
 	ArrayList<String> columnTypeList;
-	
+/*	
 	public TableVO(String tableName, ArrayList<String> columnNameList, ArrayList<String> columnValueList,
 			ArrayList<String> columnTypeList) {
+		super();
 		this.tableName = tableName;
 		this.columnNameList = columnNameList;
 		this.columnValueList = columnValueList;
 		this.columnTypeList = columnTypeList;
 	}
+
+	public TableVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}*/
 
 	public TableVO(String tableName, ArrayList<String> columnNameList, ArrayList<String> columnTypeList) {
 		this.tableName = tableName;
