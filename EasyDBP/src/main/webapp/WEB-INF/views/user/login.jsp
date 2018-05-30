@@ -5,10 +5,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=UTF-8">
-<title>Insert title here</title>
+<script src="/easydb/resources/jquery-3.2.1.min.js"></script>
+<meta charset="UTF-8">
+<title>로그인</title>
 </head>
 <body>
-LOGIN PAGE
+<form action = "user/login" method = "post">
+ID<input type = "text" name = "id">
+PW<input type = "text" name = "pw">
+<input type = "submit" value = "login">
+
+</form>
+
 </body>
+
 </html>
