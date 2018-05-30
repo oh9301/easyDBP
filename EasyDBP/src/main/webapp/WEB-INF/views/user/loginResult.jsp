@@ -7,19 +7,15 @@
 <head>
 <script src="/easydb/resources/jquery-3.2.1.min.js"></script>
 <meta charset="UTF-8">
-<title>로그인</title>
+<title>Insert title here</title>
 </head>
 <body>
-<form action = "user/login" method = "post"></form>
-<form action = "user/join" method = "post">
 
-ID    <input type = "text" name = "id"><br>
-PW<input type = "text" name = "pw"><br>
-<input type = "submit" value = "login">
-<input type = "submit" value = "create">
+<p>로그인 결과</p>
+
+<c:if test = "${empty userVo }">${loginFailMsg }</c:if>
+<c:if test = "$${loginFailMsg }">?</c:if>
 
 
-</form>
 </body>
-
 </html>

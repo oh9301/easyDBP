@@ -14,6 +14,7 @@ public class UserController {
 	@Autowired
 	UserDAO userDao;
 	
+	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String userTest(){
 		return "/user/login";
@@ -22,22 +23,30 @@ public class UserController {
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public ModelAndView checkLogin(String id, String pw){
 		ModelAndView mv = new ModelAndView();
-		//userDao = service.checkLogin(id);
-		if(userDao == null){
+			UserVO userVo = userDao.checkLogin(id);
+			String loginFailMsg = null;
+			
+		if(userVo == null){
 			System.out.println("해당 아이디 없음");
-			String loginFailMsg = "해당 아이디 없음";
+			loginFailMsg = "해당 아이디 없음";
 			mv.addObject("loginFailMsg", loginFailMsg);
-			mv.setViewName("");
+			mv.setViewName("loginResult");
 		}
-		/*if(vo.getId().equalsIgnoreCase("hr") && vo.getPw().equals("hr")){
-			mv.addObject("result", true);
+			
+		else if(userVo.getPw().equals(pw)){
+			System.out.println("패스워드 일치");
+			mv.addObject("userVo", userVo);
+			//mv.setViewName("main");
 		}
-		else{
-			mv.addObject("result", false);
+		
+		else if(!userVo.getPw().equals(pw)){
+			System.out.println("패스워드 불일치");
+			 loginFailMsg = "패스워드불일치";
+			 mv.addObject("loginFailMsg", loginFailMsg);
+			mv.setViewName("loginResult");
 		}
-		mv.setViewName("loginresult");
-		return mv;*/
-		return null;
+	
+		return mv;
 	}
 	
 	

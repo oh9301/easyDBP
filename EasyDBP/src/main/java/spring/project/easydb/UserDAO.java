@@ -10,5 +10,7 @@ public class UserDAO {
 	@Autowired
 	SqlSession session;
 	
-	
+	public UserVO checkLogin (String id){
+		return session.selectOne("checkLogin", id);
+	}
 }

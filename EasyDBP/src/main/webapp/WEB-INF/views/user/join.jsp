@@ -5,10 +5,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset=UTF-8">
-<title>Insert title here</title>
+<script src="/easydb/resources/jquery-3.2.1.min.js"></script>
+<meta charset="UTF-8">
+<title>회원가입</title>
 </head>
 <body>
-JOIN (가입) PAGE
+ID    <input type = "text" name = "id">
+<input type = "submit" name = "check" value = "중복"><br>
+PW<input type = "text" name = "pw"><br>
+<input type = "submit" value = "create">
+
 </body>
+
 </html>
