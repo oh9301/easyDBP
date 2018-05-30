@@ -6,9 +6,20 @@
 <html>
 <head>
 <meta charset=UTF-8">
-<title>Insert title here</title>
+<title>TABLEMANAGE.JSP</title>
 </head>
 <body>
-TABLEMANAGE
+
+<form action="/table" method="post">
+<table>
+
+
+
+
+</table>
+
+</form>
+
+
 </body>
 </html>

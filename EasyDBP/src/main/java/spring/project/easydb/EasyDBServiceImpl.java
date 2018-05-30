@@ -1,5 +1,7 @@
 package spring.project.easydb;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,5 +14,11 @@ public class EasyDBServiceImpl implements EasyDBService {
 	TableDAO tableDao;
 	@Autowired
 	DataDAO dataDao;
+	@Override
+	
+	public void getTable(String tablename) throws Exception {
+		// TODO Auto-generated method stub
+		tableDao.getTable(tablename);
+	}
 	
 }
