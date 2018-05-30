@@ -16,19 +16,19 @@ public class TableController {
 	@Autowired
 	EasyDBService service;
 	
-	@RequestMapping(value="/table", method=RequestMethod.GET)
+	@RequestMapping("/table")
 	public String getTable() throws Exception{
-		
+		service.getTable("employees");
 		return "/db/tablemanage";
 	}
 	
-	@RequestMapping(value="/table", method=RequestMethod.POST)
+	/*@RequestMapping(value="/table", method=RequestMethod.POST)
 	public ModelAndView getTableSuccess() throws Exception
 	{
 		
 		service.getTable("employees");
 		ModelAndView mv =new ModelAndView();
 		return mv;
-	}
+	}*/
 	
 }
