@@ -6,5 +6,6 @@
 	<typeAliases>
 		<typeAlias type="spring.project.easydb.UserVO" alias="user"></typeAlias>
 		<typeAlias type="spring.project.easydb.TableVO" alias="table"></typeAlias>
+		<typeAlias type="spring.project.easydb.TableTempVO" alias="tmptable"></typeAlias>
 	</typeAliases>
 </configuration>
