@@ -22,9 +22,8 @@ public class EasyDBServiceImpl implements EasyDBService {
 	
 	@Override
 	
-	public void getTable(String tablename) throws Exception {
-		// TODO Auto-generated method stub
-		tableDao.getTable(tablename);
+	public List<TableVO> getTable(String tableName){
+		return tableDao.getTable(tableName);
 	}
 	
 }
