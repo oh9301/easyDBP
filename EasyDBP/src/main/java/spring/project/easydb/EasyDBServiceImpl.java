@@ -14,6 +14,12 @@ public class EasyDBServiceImpl implements EasyDBService {
 	TableDAO tableDao;
 	@Autowired
 	DataDAO dataDao;
+	
+	@Override
+	public UserVO checkLogin(String id){
+		return userDao.checkLogin(id);
+	}
+	
 	@Override
 	
 	public void getTable(String tablename) throws Exception {

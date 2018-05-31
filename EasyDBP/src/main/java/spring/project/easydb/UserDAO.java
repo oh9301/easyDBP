@@ -11,6 +11,6 @@ public class UserDAO {
 	SqlSession session;
 	
 	public UserVO checkLogin (String id){
-		return session.selectOne("checkLogin", id);
+		return session.selectOne("dbcontrol.checkLogin", id);//id를 checkLogin으로 보내준다 --> sql-mapping.xml에서
 	}
 }

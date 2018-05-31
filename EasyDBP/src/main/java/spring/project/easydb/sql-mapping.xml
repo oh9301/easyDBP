@@ -5,4 +5,10 @@
 	<select id="selectAll" resultType="java.util.HashMap">
 		select * from employees		<!--#{테이블이름 }  -->
 	</select>
+	
+	<select id="checkLogin" parameterType="String" resultType="user">
+	select * from test where id = #{id};
+	</select>
+	
+	
 </mapper>
