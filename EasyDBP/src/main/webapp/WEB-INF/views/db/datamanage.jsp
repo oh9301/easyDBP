@@ -19,7 +19,17 @@
 	<br>
 	
 	<table border=1>
-		<tr><td>col 1</td> <td>col 2</td></tr>
+		<!-- Table Column name -->
+		<tr>
+		<c:forEach items="${columnList }" var="column">
+			<td>
+				${column }
+			</td>
+		</c:forEach>
+		<td>
+			
+		</td>
+		</tr>
 		<c:forEach items="${tableList }" var="vo">
 			<tr>
 				<c:forEach items="${fn:split(vo, ',') }" var="cell">
@@ -27,11 +37,11 @@
 				</c:forEach>
 
 				<td>
-					<button> 삭제 </button>
+					<input type=button value="수정">
 				</td>
 
 				<td>
-					<button> 수정 </button>
+					<input type=button value="삭제">
 				</td>
 
 			</tr>

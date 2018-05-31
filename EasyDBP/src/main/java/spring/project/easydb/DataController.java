@@ -27,20 +27,20 @@ public class DataController {
 	@Autowired
 	SqlSession session;
 	
+	@ModelAttribute("columnList")
+	public List<String> getTableColumnList() {
+		List<String> list = session.selectList("dbcontrol.selectColumnName");
+		return list;
+	}
+	
 	@ModelAttribute("tableList")
 	public List<List<Object>> getTableList() {
 		List<HashMap<String, Object>> list = session.selectList("dbcontrol.selectAll");
 		List<List<Object>> resultList = new ArrayList<>();
 		for(HashMap<String, Object> elist : list){
 			List<Object> tmplist = new ArrayList<>();
+			System.out.println(elist.keySet().size());
 			for(String e : elist.keySet()){
-				System.out.println("'" + elist.get(e) +"'"+ " : " + e);
-//				if(elist.get(e)){
-//					System.out.println("null이다");
-//					elist.put(e, "");
-//				}
-				
-				
 				tmplist.add(elist.get(e));
 			}
 			resultList.add(tmplist);

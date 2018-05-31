@@ -5,4 +5,8 @@
 	<select id="selectAll" resultType="java.util.HashMap">
 		select * from employees		<!--#{테이블이름 }  -->
 	</select>
+	
+	<select id="selectColumnName" parameterType="string" resultType="table">
+		SELECT COLUMN_NAME FROM USER_TAB_COLS WHERE UPPER(TABLE_NAME) = UPPER(#{str})		
+	</select>
 </mapper>
